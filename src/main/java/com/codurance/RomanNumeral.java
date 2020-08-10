@@ -18,7 +18,7 @@ public class RomanNumeral {
   private enum Roman {
     X(10), IX(9), V(5), IV(4), I(1);
 
-    public final int arabic;
+    int arabic;
 
     Roman(int arabic) {
       this.arabic = arabic;
