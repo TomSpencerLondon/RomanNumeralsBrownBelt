@@ -14,7 +14,8 @@ public class RomanNumeralsShould {
       "1, I",
       "2, II",
       "3, III",
-      "5, V"
+      "5, V",
+      "6, VI"
   })
   void return_output_for_input(int input, String output) {
     assertEquals(output, romanFor(input));
