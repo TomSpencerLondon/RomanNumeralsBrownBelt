@@ -5,23 +5,23 @@ public class RomanNumeral {
   public static String romanFor(int input) {
     String result = "";
 
-    if (input >= 10) {
-      result += "X";
-      input -= 10;
+    for(Roman roman : Roman.values()) {
+      while (input >= roman.arabic) {
+        result += roman.toString();
+        input -= roman.arabic;
+      }
     }
-
-    if (input >= 5) {
-      result += "V";
-      input -= 5;
-    }
-
-    if (input >= 4) {
-      result += "IV";
-      input -= 4;
-    }
-
-    result += "I".repeat(input);
 
     return result;
+  }
+
+  private enum Roman {
+    X(10), IX(9), V(5), IV(4), I(1);
+
+    public final int arabic;
+
+    Roman(int arabic) {
+      this.arabic = arabic;
+    }
   }
 }

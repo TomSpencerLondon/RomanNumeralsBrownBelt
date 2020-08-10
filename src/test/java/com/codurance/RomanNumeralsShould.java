@@ -17,9 +17,11 @@ public class RomanNumeralsShould {
       "5, V",
       "6, VI",
       "8, VIII",
+      "9, IX",
       "10, X",
       "11, XI",
-      "15, XV"
+      "15, XV",
+      "30, XXX"
   })
   void return_output_for_input(int input, String output) {
     assertEquals(output, romanFor(input));
