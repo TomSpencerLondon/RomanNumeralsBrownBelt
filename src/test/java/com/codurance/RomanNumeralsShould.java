@@ -31,7 +31,15 @@ public class RomanNumeralsShould {
 
   @ParameterizedTest
   @CsvSource({
-      "I, 1"
+      "I, 1",
+      "II, 2",
+      "III, 3",
+      "IV, 4",
+      "V, 5",
+      "VIII, 8",
+      "IX, 9",
+      "X, 10",
+      "XXXIX, 39"
   })
   void return_arabic_for_roman(String input, int output) {
     assertEquals(output, arabicFor(input));

@@ -1,5 +1,7 @@
 package com.codurance;
 
+import java.util.Map;
+
 public class RomanNumeral {
 
   public static String romanFor(int input) {
@@ -16,7 +18,19 @@ public class RomanNumeral {
   }
 
   public static int arabicFor(String input) {
-    return 1;
+    Map<Character, Integer> numerals = Map.of('X', 10, 'V', 5, 'I', 1);
+
+   int result = numerals.get(input.charAt(input.length() - 1));
+
+    for (int i = input.length() - 2; i >= 0; i--){
+     if (numerals.get(input.charAt(i)) < numerals.get(input.charAt(i + 1))){
+       result -= numerals.get(input.charAt(i));
+     }else {
+       result += numerals.get(input.charAt(i));
+     }
+   }
+
+    return result;
   }
 
 
