@@ -3,10 +3,25 @@ package com.codurance;
 public class RomanNumeral {
 
   public static String romanFor(int input) {
-    if (input == 5){
-      return "V";
+    String result = "";
+
+    if (input >= 10) {
+      result += "X";
+      input -= 10;
     }
 
-    return "I".repeat(input);
+    if (input >= 5) {
+      result += "V";
+      input -= 5;
+    }
+
+    if (input >= 4) {
+      result += "IV";
+      input -= 4;
+    }
+
+    result += "I".repeat(input);
+
+    return result;
   }
 }
