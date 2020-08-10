@@ -15,6 +15,11 @@ public class RomanNumeral {
     return result;
   }
 
+  public static int arabicFor(String input) {
+    return 1;
+  }
+
+
   private enum Roman {
     X(10), IX(9), V(5), IV(4), I(1);
 
