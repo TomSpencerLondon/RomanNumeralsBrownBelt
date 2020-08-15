@@ -23,7 +23,8 @@ public class RomanNumeralsShould {
       "10, X",
       "11, XI",
       "15, XV",
-      "30, XXX"
+      "30, XXX",
+      "1994, MCMXCIV"
   })
   void return_roman_for_arabic(int input, String output) {
     assertEquals(output, romanFor(input));
@@ -39,7 +40,8 @@ public class RomanNumeralsShould {
       "VIII, 8",
       "IX, 9",
       "X, 10",
-      "XXXIX, 39"
+      "XXXIX, 39",
+      "MCMXCIV, 1994"
   })
   void return_arabic_for_roman(String input, int output) {
     assertEquals(output, arabicFor(input));
